@@ -1,0 +1,278 @@
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Header + Centering */
+
+body {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: #1c1c1c;
+}
+
+.header_container {
+  margin-top: 20px;
+  width: 1000px;
+  height: 230px;
+  background-image: url(images/header_photo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header_inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  min-height: 100%;
+}
+
+.header_title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.header_subtitle {
+  text-align: right;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Main */
+
+.main_container {
+  width: 1000px;
+  background-color: #0e0e0e;
+}
+
+/* Search */
+
+.search_bar {
+  position: relative;
+  top: -20px;
+  display: flex;
+  justify-content: center;
+}
+
+.material-icons {
+  position: absolute;
+  left: 22%;
+  top: 23%;
+  color: white;
+}
+
+.search_input {
+  width: 450px;
+  height: 42px;
+  background-color: #2e2e2f;
+  border-radius: 10px 0 0 10px;
+  padding-left: 40px;
+  outline: none;
+  border: none;
+  color: #d5d5d5;
+}
+
+input::placeholder {
+  color: #a5a5a5;
+  opacity: 0.5;
+}
+
+.search_btn {
+  background: #4b4b4b;
+  border-radius: 0px 6px 6px 0px;
+  height: 42px;
+  width: 120px;
+  padding-inline: 20px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.content {
+  color: #2e2e2f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 750px;
+}
+
+.content.watchlist {
+  min-height: 790px;
+}
+
+.watchlist_content {
+  color: #787878;
+}
+
+.watchlist_subheading {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.watchlist_home {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  gap: 10px;
+}
+
+/* Movies Container */
+
+.movie_container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.movie_inner {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 40px;
+  border-bottom: solid #2c2c2c;
+}
+
+.movie_info {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  flex-basis: 100%;
+}
+
+.poster_img {
+  width: 350px;
+  height: 350px;
+}
+
+/* Each movie */
+
+.title {
+  font-size: 1.5rem;
+}
+.movie_title {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  gap: 10px;
+}
+
+.star_icon {
+  position: relative;
+  right: -5px;
+}
+
+.movie_desc {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.watchlist_container {
+  display: flex;
+  justify-content: flex-start;
+  height: 20px;
+  gap: 5px;
+}
+
+.plot {
+  color: #a5a5a5;
+}
+
+.plus_icon {
+  cursor: pointer;
+}
+
+/* Added/Removed text*/
+
+.added_text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 10px;
+  position: fixed;
+  inset: 0;
+  top: 20px;
+  width: fit-content;
+  height: min-content;
+  margin-inline: auto;
+  color: hsl(146, 90%, 67%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.removed_text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 10px;
+  position: fixed;
+  inset: 0;
+  top: 20px;
+  width: fit-content;
+  height: min-content;
+  margin-inline: auto;
+  color: hsl(1, 90%, 67%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.visble {
+  opacity: 1;
+  transition: opacity 1s linear;
+}
